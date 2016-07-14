@@ -5,9 +5,9 @@ import android.text.TextUtils;
 import com.huawei.sirius.thinktank.login.interfaces.LoginPresenter;
 import com.huawei.sirius.thinktank.login.interfaces.LoginView;
 import com.huawei.sirius.thinktank.model.UserAccount;
+import com.huawei.sirius.thinktank.data.UserCloudStorage;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import rx.Subscriber;
 
 public class LoginPresenterImp implements LoginPresenter {
     private LoginView loginView;
@@ -20,13 +20,13 @@ public class LoginPresenterImp implements LoginPresenter {
     public void login(String username, String password) {
         loginView.showLoading();
 
-        if (TextUtils.isEmpty(password)) {
-            loginView.showError("Password should not be empty!");
+        if (TextUtils.isEmpty(username)) {
+            loginView.showError("username should not be empty!");
             return;
         }
 
-        if (TextUtils.isEmpty(username)) {
-            loginView.showError("username should not be empty!");
+        if (TextUtils.isEmpty(password)) {
+            loginView.showError("Password should not be empty!");
             return;
         }
 
@@ -35,14 +35,23 @@ public class LoginPresenterImp implements LoginPresenter {
     }
 
     private void sendLoginRequest(String username, String password) {
-        //TODO login request
 
-        new Timer().schedule(new TimerTask() {
+        new UserCloudStorage().login(username, password, new Subscriber<UserAccount>() {
             @Override
-            public void run() {
+            public void onCompleted() {
+                loginView.hideLoading();
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                loginView.showError(e.getMessage());
+            }
+
+            @Override
+            public void onNext(UserAccount userAccount) {
                 loginView.loginSuccess(new UserAccount());
             }
-        }, 2000);
+        });
     }
 
     @Override
