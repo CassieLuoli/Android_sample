@@ -93,7 +93,7 @@ public abstract class BaseActivity extends AppCompatActivity implements LoadingV
 
     @Override
     public Context context() {
-        return null;
+        return this;
     }
 }
 
