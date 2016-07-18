@@ -25,8 +25,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".home.HomeActivity"
-            android:label="@string/app_name" />
+            android:name=".meeting.MainActivity"
+            android:label="@string/app_name" >
+            </activity>
     </application>
 
 </manifest>

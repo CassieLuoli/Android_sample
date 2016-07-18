@@ -1,7 +1,6 @@
-package com.huawei.sirius.thinktank.home;
+package com.huawei.sirius.thinktank.meeting.calendar;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -14,7 +13,7 @@ import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 import com.huawei.sirius.thinktank.R;
-import com.huawei.sirius.thinktank.home.interfaces.HomeView;
+import com.huawei.sirius.thinktank.meeting.MainActivity;
 import com.huawei.sirius.thinktank.model.MeetingEvent;
 
 import java.util.ArrayList;
@@ -24,15 +23,14 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
-import rx.Subscriber;
 import rx.functions.Action1;
 import rx.functions.Func1;
 
 /**
  * Created by Luoli on 7/15/16.
  */
-public class HomeCalendar extends Fragment {
-    private static final String TAG = HomeActivity.class.getSimpleName();
+public class CalendarFragment extends Fragment {
+    private static final String TAG = MainActivity.class.getSimpleName();
 
 
     @BindView(R.id.home_calendar)
@@ -41,7 +39,7 @@ public class HomeCalendar extends Fragment {
     @BindView(R.id.home_weekview)
     WeekView weekView;
 
-    private HomePresenterImp presenter;
+    private CalendarPresenterImp presenter;
 
     @Nullable
     @Override
