@@ -1,5 +1,6 @@
 package com.huawei.sirius.thinktank.home;
 
+import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -14,12 +15,17 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import rx.Observable;
 
 public class HomePresenterImp implements HomePresenter {
 
     private static final String TAG = HomePresenterImp.class.getSimpleName();
     public static final int YUNA_NIAN = 1900;
     private final HomeView homeView;
+    private List<MeetingEvent> collection;
 
 
     public HomePresenterImp(HomeView homeView) {
@@ -27,13 +33,29 @@ public class HomePresenterImp implements HomePresenter {
     }
 
     @Override
-    public void requestEvents(Date fromDate, Date toDate) {
+    public void requestEvents(final Date fromDate, Date toDate) {
         //TODO retrieve from backend
 
-        List<MeetingEvent> collection = prepareWeekViewEvents(fromDate.getYear() + YUNA_NIAN, fromDate.getMonth(), fromDate.getDate());
+        if (collection != null) {
+            return;
+        }
 
-        Log.d(TAG, "requestEvents: " + collection.size());
-        homeView.refreshEvents(collection);
+        homeView.showLoading();
+
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                collection = prepareWeekViewEvents(fromDate.getYear() + YUNA_NIAN, fromDate.getMonth(), fromDate.getDate());
+                Log.d(TAG, "requestEvents: " + collection.size());
+                ((HomeActivity)homeView).runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        homeView.refreshEvents(collection);
+                    }
+                });
+            }
+        }, 1000);
+
     }
 
     @Override
@@ -63,16 +85,16 @@ public class HomePresenterImp implements HomePresenter {
         List<MeetingEvent> eventList = new ArrayList<>();
 
         Calendar startTime = Calendar.getInstance();
-        startTime.set(Calendar.HOUR_OF_DAY, 3);
+        startTime.set(Calendar.HOUR_OF_DAY, 9);
         startTime.set(Calendar.MINUTE, 30);
         startTime.set(Calendar.MONTH, newMonth);
         startTime.set(Calendar.YEAR, newYear);
         startTime.set(Calendar.DAY_OF_MONTH, date);
         Calendar end = (Calendar) startTime.clone();
-        end.set(Calendar.HOUR_OF_DAY, 4);
+        end.set(Calendar.HOUR_OF_DAY, 12);
         end.set(Calendar.MINUTE, 30);
         end.set(Calendar.MONTH, newMonth);
-        MeetingEvent weekViewEvent = new MeetingEvent(21, "meeting", startTime, end);
+        MeetingEvent weekViewEvent = new MeetingEvent(31, "meeting", startTime, end);
         weekViewEvent.setColor(homeView.context().getResources().getColor(R.color.event_color_04));
         eventList.add(weekViewEvent);
 
@@ -88,8 +110,8 @@ public class HomePresenterImp implements HomePresenter {
             int daySeed = Math.abs(new Random(i).nextInt(hourSeed + i));
             hourSeed = Math.abs(new Random(daySeed).nextInt(i + daySeed));
 
-            int day = (daySeed % 29 + 30) % 29;
-            int hour = (hourSeed % 24 + 24) % 24;
+            int day = daySeed % 29;
+            int hour = hourSeed % 8 + 8;
 
             Log.d(TAG, "day: " + day + "hour: " + hour);
 
@@ -100,9 +122,11 @@ public class HomePresenterImp implements HomePresenter {
             startTime.set(Calendar.MONTH, newMonth);
             startTime.set(Calendar.YEAR, newYear);
             Calendar endTime = (Calendar) startTime.clone();
-            endTime.set(Calendar.HOUR_OF_DAY, hour + 3);
+            int length = Math.abs(new Random(i).nextInt(hourSeed + i)) % 6;
+            endTime.set(Calendar.HOUR_OF_DAY, hour + length);
             MeetingEvent event = new MeetingEvent(i, "SESSION", startTime, endTime);
-            event.setColor(homeView.context().getResources().getColor(R.color.event_color_01));
+            int event_color_01 = day%2==0? R.color.event_color_01: R.color.event_color_03;
+            event.setColor(homeView.context().getResources().getColor(event_color_01));
             eventList.add(event);
         }
 

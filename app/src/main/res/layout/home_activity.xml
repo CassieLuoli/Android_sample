@@ -1,36 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <fragment
+        android:id="@+id/home_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:name="com.huawei.sirius.thinktank.home.HomeCalendar"
+        tools:layout="@layout/home_calendar" />
 
-        <CalendarView
-            android:id="@+id/home_calendar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <com.alamkanak.weekview.WeekView
-            android:id="@+id/home_weekview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="1500dp"
-            app:columnGap="8dp"
-            app:dayBackgroundColor="#05000000"
-            app:eventTextColor="@android:color/white"
-            app:headerColumnBackground="#ffffffff"
-            app:headerColumnPadding="8dp"
-            app:headerColumnTextColor="#8f000000"
-            app:headerRowBackgroundColor="#ffefefef"
-            app:headerRowPadding="12dp"
-            app:hourHeight="60dp"
-            app:noOfVisibleDays="3"
-            app:textSize="12sp"
-            app:todayBackgroundColor="#1848adff" />
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
