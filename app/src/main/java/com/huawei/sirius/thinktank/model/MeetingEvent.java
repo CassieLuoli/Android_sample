@@ -2,6 +2,7 @@ package com.huawei.sirius.thinktank.model;
 
 import com.alamkanak.weekview.WeekViewEvent;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -11,6 +12,10 @@ public class MeetingEvent extends WeekViewEvent {
     }
 
     public List<MeetingTopic> getTopicList() {
+        topicList = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            topicList.add(new MeetingTopic());
+        }
         return topicList;
     }
 

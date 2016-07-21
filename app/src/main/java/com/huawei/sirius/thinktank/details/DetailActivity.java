@@ -45,9 +45,10 @@ public class DetailActivity extends BaseActivity implements DetailView {
 
     @Override
     public void showDetails(MeetingEvent meetingEvent) {
-//
-//        topicList.setLayoutManager(new LinearLayoutManager(this));
-//        topicList.setAdapter(new TopicListAdapter());
+
+
+        topicList.setLayoutManager(new LinearLayoutManager(this));
+        topicList.setAdapter(new TopicListAdapter(meetingEvent.getTopicList()));
 
     }
 }
