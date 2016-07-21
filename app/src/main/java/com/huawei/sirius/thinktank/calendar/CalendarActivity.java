@@ -101,7 +101,9 @@ public class CalendarActivity extends BaseActivity implements CalendarView {
         hideLoading();
         Log.d(TAG, "showMeetingDetail");
 
-        startActivity(new Intent(this, DetailActivity.class));
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(DetailActivity.MEETING_ID, meetingEvent.getId());
+        startActivity(intent);
     }
 
     @Override

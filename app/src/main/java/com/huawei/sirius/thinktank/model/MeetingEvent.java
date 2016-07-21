@@ -3,9 +3,19 @@ package com.huawei.sirius.thinktank.model;
 import com.alamkanak.weekview.WeekViewEvent;
 
 import java.util.Calendar;
+import java.util.List;
 
 public class MeetingEvent extends WeekViewEvent {
+    List<MeetingTopic> topicList;
     public MeetingEvent() {
+    }
+
+    public List<MeetingTopic> getTopicList() {
+        return topicList;
+    }
+
+    public void setTopicList(List<MeetingTopic> topicList) {
+        this.topicList = topicList;
     }
 
     public MeetingEvent(long id, String name, int startYear, int startMonth, int startDay, int startHour, int startMinute, int endYear, int endMonth, int endDay, int endHour, int endMinute) {

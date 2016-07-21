@@ -8,4 +8,6 @@ import com.huawei.sirius.thinktank.shared.interfaces.BasePresenter;
  */
 public interface DetailPresenter extends BasePresenter {
     public void showDetail(MeetingEvent meetingEvent);
+
+    void requestDetail(long meetingId);
 }
