@@ -1,12 +1,11 @@
-package com.huawei.sirius.thinktank.meeting.calendar;
+package com.huawei.sirius.thinktank.calendar;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.huawei.sirius.thinktank.R;
-import com.huawei.sirius.thinktank.meeting.MainActivity;
-import com.huawei.sirius.thinktank.meeting.calendar.interfaces.CalendarPresenter;
-import com.huawei.sirius.thinktank.meeting.calendar.interfaces.CalendarView;
+import com.huawei.sirius.thinktank.calendar.interfaces.CalendarPresenter;
+import com.huawei.sirius.thinktank.calendar.interfaces.CalendarView;
 import com.huawei.sirius.thinktank.model.MeetingEvent;
 
 import java.util.ArrayList;
@@ -39,14 +38,16 @@ public class CalendarPresenterImp implements CalendarPresenter {
 
         calendarView.showLoading();
 
-        new Timer().schedule(new TimerTask() {
+        new Timer(true).schedule(new TimerTask() {
             @Override
             public void run() {
                 collection = prepareWeekViewEvents(fromDate.getYear() + YUNA_NIAN, fromDate.getMonth(), fromDate.getDate());
                 Log.d(TAG, "requestEvents: " + collection.size());
-                ((MainActivity) calendarView).runOnUiThread(new Runnable() {
+
+                ((CalendarActivity) calendarView).runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        calendarView.hideLoading();
                         calendarView.refreshEvents(collection);
                     }
                 });
@@ -56,13 +57,18 @@ public class CalendarPresenterImp implements CalendarPresenter {
     }
 
     @Override
+    public void select(MeetingEvent event) {
+        calendarView.showMeetingDetail(event);
+    }
+
+    @Override
     public List<MeetingEvent> getEvents(Date fromDate, Date toDate) {
         return prepareWeekViewEvents(fromDate.getYear() + YUNA_NIAN, fromDate.getMonth(), fromDate.getDate());
     }
 
     @Override
     public void resume() {
-
+        requestEvents(new Date(), null);
     }
 
     @Override
@@ -75,6 +81,9 @@ public class CalendarPresenterImp implements CalendarPresenter {
 
     }
 
+    @Override
+    public void back() {
+    }
 
     @NonNull
     private List<MeetingEvent> prepareWeekViewEvents(int newYear, int newMonth, int date) {
@@ -122,7 +131,7 @@ public class CalendarPresenterImp implements CalendarPresenter {
             int length = Math.abs(new Random(i).nextInt(hourSeed + i)) % 6;
             endTime.set(Calendar.HOUR_OF_DAY, hour + length);
             MeetingEvent event = new MeetingEvent(i, "SESSION", startTime, endTime);
-            int event_color_01 = day%2==0? R.color.event_color_01: R.color.event_color_03;
+            int event_color_01 = day % 2 == 0 ? R.color.event_color_01 : R.color.event_color_03;
             event.setColor(calendarView.context().getResources().getColor(event_color_01));
             eventList.add(event);
         }

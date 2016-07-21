@@ -1,58 +1,54 @@
-package com.huawei.sirius.thinktank.meeting.calendar;
+package com.huawei.sirius.thinktank.calendar;
 
-import android.app.Fragment;
+import android.content.Intent;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CalendarView;
 
 import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 import com.huawei.sirius.thinktank.R;
-import com.huawei.sirius.thinktank.meeting.MainActivity;
+import com.huawei.sirius.thinktank.details.DetailActivity;
+import com.huawei.sirius.thinktank.calendar.interfaces.CalendarPresenter;
+import com.huawei.sirius.thinktank.calendar.interfaces.CalendarView;
 import com.huawei.sirius.thinktank.model.MeetingEvent;
+import com.huawei.sirius.thinktank.shared.ui.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import rx.Observable;
 import rx.functions.Action1;
 import rx.functions.Func1;
 
-/**
- * Created by Luoli on 7/15/16.
- */
-public class CalendarFragment extends Fragment {
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class CalendarActivity extends BaseActivity implements CalendarView {
+
+    public static final String TAG = CalendarActivity.class.getName();
 
 
     @BindView(R.id.home_calendar)
-    CalendarView calendarView;
+    android.widget.CalendarView calendarView;
 
     @BindView(R.id.home_weekview)
     WeekView weekView;
 
-    private CalendarPresenterImp presenter;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_calendar, container, false);
-        ButterKnife.bind(this, view);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.meeting_calendar);
         initView();
-        return view;
     }
+
+
     private void initView() {
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+        calendarView.setOnDateChangeListener(new android.widget.CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
+            public void onSelectedDayChange(android.widget.CalendarView calendarView, int i, int i1, int i2) {
                 GregorianCalendar date = new GregorianCalendar(i, i1, i2);
                 weekView.goToDate(date);
             }
@@ -62,7 +58,13 @@ public class CalendarFragment extends Fragment {
         weekView.setMonthChangeListener(new MonthLoader.MonthChangeListener() {
             @Override
             public List<? extends WeekViewEvent> onMonthChange(int newYear, int newMonth) {
-                return new ArrayList<WeekViewEvent>();
+                return new ArrayList<>();
+            }
+        });
+        weekView.setOnEventClickListener(new WeekView.EventClickListener() {
+            @Override
+            public void onEventClick(WeekViewEvent event, RectF eventRect) {
+                ((CalendarPresenter) presenter).select((MeetingEvent)event);
             }
         });
     }
@@ -92,6 +94,25 @@ public class CalendarFragment extends Fragment {
             }
         });
         weekView.notifyDatasetChanged();
+    }
+
+    @Override
+    public void showMeetingDetail(MeetingEvent meetingEvent) {
+        hideLoading();
+        Log.d(TAG, "showMeetingDetail");
+
+        startActivity(new Intent(this, DetailActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ((CalendarPresenter)presenter).back();
+    }
+
+    @Override
+    public void initPresenter() {
+        presenter = new CalendarPresenterImp(this);
     }
 
 }

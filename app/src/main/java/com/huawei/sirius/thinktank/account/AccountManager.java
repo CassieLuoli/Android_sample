@@ -9,6 +9,7 @@ import java.util.Date;
 public class AccountManager {
     private static AccountManager instance = new AccountManager();
     private Date loginTime;
+    private UserAccount cache;
 
     private AccountManager() {
     }
@@ -19,6 +20,7 @@ public class AccountManager {
 
     public void cache(UserAccount userAccount) {
         loginTime = new Date();
+        cache = userAccount;
     }
 
     public boolean isExpire() {
@@ -26,6 +28,10 @@ public class AccountManager {
         boolean valid = loginTime != null
                 && System.currentTimeMillis() - loginTime.getTime() < DateUtils.DAY_IN_MILLIS;
         return true;
+    }
+
+    public UserAccount getLatestUserAccount() {
+        return cache;
     }
 
     public void expire(String username) {

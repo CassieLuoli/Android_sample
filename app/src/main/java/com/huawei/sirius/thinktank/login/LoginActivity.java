@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.widget.EditText;
 
 import com.huawei.sirius.thinktank.R;
-import com.huawei.sirius.thinktank.meeting.MainActivity;
+import com.huawei.sirius.thinktank.calendar.CalendarActivity;
 import com.huawei.sirius.thinktank.login.interfaces.LoginView;
 import com.huawei.sirius.thinktank.model.UserAccount;
 import com.huawei.sirius.thinktank.shared.ui.BaseActivity;
@@ -40,7 +40,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     public void loginSuccess(UserAccount userAccount) {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, CalendarActivity.class));
         finish();
     }
 }

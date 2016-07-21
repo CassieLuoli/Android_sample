@@ -7,4 +7,5 @@
     <color name="event_color_02">#aaf57f68</color>
     <color name="event_color_03">#aa87d288</color>
     <color name="event_color_04">#aaf8b552</color>
+    <color name="white">#ffffff</color>
 </resources>

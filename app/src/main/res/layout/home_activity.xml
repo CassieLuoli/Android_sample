@@ -5,11 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <fragment
+    <!--<fragment-->
+        <!--android:name="com.huawei.sirius.thinktank.meeting.calendar.CalendarFragment"-->
+        <!--android:id="@+id/home_fragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:layout="@layout/meeting_calendar" />-->
+
+    <FrameLayout
         android:id="@+id/home_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.huawei.sirius.thinktank.meeting.calendar.CalendarFragment"
-        tools:layout="@layout/home_calendar" />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
