@@ -1,18 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
-    <include layout="@layout/meeting_detail_header" />
-
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:id="@+id/detail_topic_list"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
-        tools:listitem="@layout/meeting_topic_item"
-        android:layout_marginTop="50dp" />
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        tools:listitem="@layout/meeting_topic_item" />
 
 </LinearLayout>
