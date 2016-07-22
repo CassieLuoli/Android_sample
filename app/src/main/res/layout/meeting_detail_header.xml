@@ -8,42 +8,52 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:background="@color/white"
         android:elevation="5dp"
-        android:layout_marginBottom="30dp"
         android:orientation="vertical"
-        android:padding="@dimen/activity_vertical_margin"
         android:translationZ="10dp"
         tools:showIn="@layout/meeting_detail">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/gradient"
+            android:layout_height="64dp">
         <TextView
             android:id="@+id/detail_subject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
             android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:text="主题: 领导力建设"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
-
+        </LinearLayout>
         <TextView
             android:id="@+id/detail_where"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="地点: 深圳 世界之窗"
-            android:textColor="@color/colorPrimaryDark" />
+            android:text="地点: " />
 
         <TextView
             android:id="@+id/detail_when"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
+
             android:text="时间: ..." />
 
         <TextView
             android:id="@+id/detail_members"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="智囊团成员: ..." />
 
@@ -51,6 +61,8 @@
             android:id="@+id/detail_topics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="议题如下:" />
     </LinearLayout>
