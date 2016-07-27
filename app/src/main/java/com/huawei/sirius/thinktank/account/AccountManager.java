@@ -2,7 +2,7 @@ package com.huawei.sirius.thinktank.account;
 
 import android.text.format.DateUtils;
 
-import com.huawei.sirius.thinktank.model.UserAccount;
+import com.huawei.sirius.thinktank.data.model.UserAccount;
 
 import java.util.Date;
 
