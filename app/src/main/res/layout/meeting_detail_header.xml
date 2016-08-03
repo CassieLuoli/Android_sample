@@ -26,7 +26,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center_vertical"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="主题: 领导力建设"
+            android:text="会议主题: 论如何提升品牌影响力"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
