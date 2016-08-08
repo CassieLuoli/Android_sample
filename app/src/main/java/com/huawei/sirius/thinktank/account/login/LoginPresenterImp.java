@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.huawei.sirius.thinktank.account.AccountManager;
 import com.huawei.sirius.thinktank.data.localstorage.UserLocalStorageImp;
-import com.huawei.sirius.thinktank.data.cloudstorage.UserCloudStorage;
+import com.huawei.sirius.thinktank.data.remotestorage.UserCloudStorage;
 import com.huawei.sirius.thinktank.account.login.interfaces.LoginPresenter;
 import com.huawei.sirius.thinktank.account.login.interfaces.LoginView;
 import com.huawei.sirius.thinktank.data.model.UserAccount;

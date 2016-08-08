@@ -1,4 +1,4 @@
-package com.huawei.sirius.thinktank.data.cloudstorage;
+package com.huawei.sirius.thinktank.data.remotestorage;
 
 import com.huawei.sirius.thinktank.data.model.UserAccount;
 

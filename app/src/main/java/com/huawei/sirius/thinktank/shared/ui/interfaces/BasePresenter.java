@@ -1,4 +1,4 @@
-package com.huawei.sirius.thinktank.shared.interfaces;
+package com.huawei.sirius.thinktank.shared.ui.interfaces;
 
 /**
  * Created by lluo on 7/13/16.

@@ -3,7 +3,7 @@ package com.huawei.sirius.thinktank.shared.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.huawei.sirius.thinktank.shared.ThinkTankApp;
+import com.huawei.sirius.thinktank.application.ThinkTankApp;
 
 /**
  * Created by Luoli on 7/27/16.

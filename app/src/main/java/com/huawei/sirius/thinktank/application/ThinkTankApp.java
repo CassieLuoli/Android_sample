@@ -1,4 +1,4 @@
-package com.huawei.sirius.thinktank.shared;
+package com.huawei.sirius.thinktank.application;
 
 import android.app.Application;
 

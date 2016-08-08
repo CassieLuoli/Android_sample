@@ -3,15 +3,11 @@ package com.huawei.sirius.thinktank.shared.ui;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.support.annotation.LayoutRes;
-import android.support.v4.widget.ContentLoadingProgressBar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.huawei.sirius.thinktank.R;
-import com.huawei.sirius.thinktank.shared.interfaces.BasePresenter;
-import com.huawei.sirius.thinktank.shared.interfaces.LoadingView;
+import com.huawei.sirius.thinktank.shared.ui.interfaces.BasePresenter;
+import com.huawei.sirius.thinktank.shared.ui.interfaces.LoadingView;
 
 import butterknife.ButterKnife;
 

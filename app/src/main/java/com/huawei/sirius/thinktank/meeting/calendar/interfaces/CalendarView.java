@@ -1,7 +1,7 @@
 package com.huawei.sirius.thinktank.meeting.calendar.interfaces;
 
 import com.huawei.sirius.thinktank.data.model.MeetingEvent;
-import com.huawei.sirius.thinktank.shared.interfaces.LoadingView;
+import com.huawei.sirius.thinktank.shared.ui.interfaces.LoadingView;
 
 import java.util.List;
 

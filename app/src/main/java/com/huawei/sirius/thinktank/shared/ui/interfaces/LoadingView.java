@@ -2,7 +2,7 @@
  * Copyright (C) 2014 android10.org. All rights reserved.
  * @author Fernando Cejas (the android10 coder)
  */
-package com.huawei.sirius.thinktank.shared.interfaces;
+package com.huawei.sirius.thinktank.shared.ui.interfaces;
 
 import android.content.Context;
 

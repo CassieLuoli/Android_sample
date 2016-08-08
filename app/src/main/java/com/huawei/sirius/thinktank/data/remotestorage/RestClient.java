@@ -1,4 +1,6 @@
-package com.huawei.sirius.thinktank.data.cloudstorage;
+package com.huawei.sirius.thinktank.data.remotestorage;
+
+import com.huawei.sirius.thinktank.shared.BuildConfig;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -12,7 +14,7 @@ public class RestClient {
 
     private RestClient() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Config.HOST)
+                .baseUrl(BuildConfig.HOST)
                 .client(new OkHttpClient())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
