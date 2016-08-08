@@ -1,4 +1,4 @@
-package com.huawei.sirius.thinktank.data.remotestorage;
+package com.huawei.sirius.thinktank.data.remotestorage.meetting;
 
 import com.huawei.sirius.thinktank.data.model.MeetingEvent;
 

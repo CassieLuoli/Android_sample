@@ -1,6 +1,7 @@
-package com.huawei.sirius.thinktank.data.remotestorage;
+package com.huawei.sirius.thinktank.data.remotestorage.UserAccount;
 
 import com.huawei.sirius.thinktank.data.model.UserAccount;
+import com.huawei.sirius.thinktank.data.remotestorage.RestClient;
 
 import rx.Observable;
 

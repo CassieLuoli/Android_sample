@@ -1,5 +1,6 @@
 package com.huawei.sirius.thinktank.data.remotestorage;
 
+import com.huawei.sirius.thinktank.data.remotestorage.UserAccount.UserApi;
 import com.huawei.sirius.thinktank.shared.BuildConfig;
 
 import okhttp3.OkHttpClient;
