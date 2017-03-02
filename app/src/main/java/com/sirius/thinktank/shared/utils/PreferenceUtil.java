@@ -1,9 +1,9 @@
-package com.hw.sirius.thinktank.shared.utils;
+package com.sirius.thinktank.shared.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.hw.sirius.thinktank.application.ThinkTankApp;
+import com.sirius.thinktank.application.ThinkTankApp;
 
 /**
  * Created by Luoli on 7/27/16.

@@ -1,8 +1,8 @@
-package com.hw.sirius.thinktank.meeting.calendar;
+package com.sirius.thinktank.meeting.calendar;
 
-import com.hw.sirius.thinktank.data.localstorage.MeetingLocalStorageImp;
-import com.hw.sirius.thinktank.data.remotestorage.meetting.MeetingApi;
-import com.hw.sirius.thinktank.data.remotestorage.meetting.MeetingCloudSorage;
+import com.sirius.thinktank.data.localstorage.MeetingLocalStorageImp;
+import com.sirius.thinktank.data.remotestorage.meetting.MeetingApi;
+import com.sirius.thinktank.data.remotestorage.meetting.MeetingCloudSorage;
 
 public class CalendarDataProvider implements MeetingApi {
     @Override

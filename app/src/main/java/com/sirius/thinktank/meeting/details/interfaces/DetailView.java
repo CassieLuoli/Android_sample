@@ -1,7 +1,7 @@
-package com.hw.sirius.thinktank.meeting.details.interfaces;
+package com.sirius.thinktank.meeting.details.interfaces;
 
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
-import com.hw.sirius.thinktank.shared.ui.interfaces.LoadingView;
+import com.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.shared.ui.interfaces.LoadingView;
 
 /**
  * Created by Luoli on 7/18/16.

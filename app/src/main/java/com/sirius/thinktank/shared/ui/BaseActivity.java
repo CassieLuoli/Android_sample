@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.shared.ui;
+package com.sirius.thinktank.shared.ui;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.hw.sirius.thinktank.shared.ui.interfaces.BasePresenter;
-import com.hw.sirius.thinktank.shared.ui.interfaces.LoadingView;
+import com.sirius.thinktank.shared.ui.interfaces.BasePresenter;
+import com.sirius.thinktank.shared.ui.interfaces.LoadingView;
 
 import butterknife.ButterKnife;
 

@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.data.interfaces;
+package com.sirius.thinktank.data.interfaces;
 
 /**
  * Created by Luoli on 16/8/8.

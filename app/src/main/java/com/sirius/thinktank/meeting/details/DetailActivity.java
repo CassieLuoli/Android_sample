@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.meeting.details;
+package com.sirius.thinktank.meeting.details;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,12 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
 
-import com.hw.sirius.thinktank.R;
-import com.hw.sirius.thinktank.meeting.details.interfaces.DetailPresenter;
-import com.hw.sirius.thinktank.meeting.details.interfaces.DetailView;
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
-import com.hw.sirius.thinktank.meeting.details.views.TopicListAdapter;
-import com.hw.sirius.thinktank.shared.ui.BaseActivity;
+import com.sirius.thinktank.R;
+import com.sirius.thinktank.meeting.details.interfaces.DetailPresenter;
+import com.sirius.thinktank.meeting.details.interfaces.DetailView;
+import com.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.meeting.details.views.TopicListAdapter;
+import com.sirius.thinktank.shared.ui.BaseActivity;
 
 import butterknife.BindView;
 

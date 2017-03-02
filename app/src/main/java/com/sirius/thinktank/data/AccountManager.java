@@ -1,8 +1,8 @@
-package com.hw.sirius.thinktank.data;
+package com.sirius.thinktank.data;
 
 import android.text.format.DateUtils;
 
-import com.hw.sirius.thinktank.data.model.UserAccount;
+import com.sirius.thinktank.data.model.UserAccount;
 
 import java.util.Date;
 

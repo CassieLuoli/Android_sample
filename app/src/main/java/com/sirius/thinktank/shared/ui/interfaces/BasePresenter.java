@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.shared.ui.interfaces;
+package com.sirius.thinktank.shared.ui.interfaces;
 
 /**
  * Created by lluo on 7/13/16.

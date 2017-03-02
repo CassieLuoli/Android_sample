@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.services;
+package com.sirius.thinktank.services;
 
 import android.app.Service;
 import android.content.Intent;

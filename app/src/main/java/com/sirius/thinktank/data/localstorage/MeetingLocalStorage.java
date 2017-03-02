@@ -1,6 +1,6 @@
-package com.hw.sirius.thinktank.data.localstorage;
+package com.sirius.thinktank.data.localstorage;
 
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.data.model.MeetingEvent;
 
 import java.util.List;
 

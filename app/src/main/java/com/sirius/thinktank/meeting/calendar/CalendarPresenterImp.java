@@ -1,10 +1,10 @@
-package com.hw.sirius.thinktank.meeting.calendar;
+package com.sirius.thinktank.meeting.calendar;
 
-import com.hw.sirius.thinktank.data.AccountManager;
-import com.hw.sirius.thinktank.data.localstorage.MeetingLocalStorageImp;
-import com.hw.sirius.thinktank.meeting.calendar.interfaces.CalendarPresenter;
-import com.hw.sirius.thinktank.meeting.calendar.interfaces.CalendarView;
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.data.AccountManager;
+import com.sirius.thinktank.data.localstorage.MeetingLocalStorageImp;
+import com.sirius.thinktank.meeting.calendar.interfaces.CalendarPresenter;
+import com.sirius.thinktank.meeting.calendar.interfaces.CalendarView;
+import com.sirius.thinktank.data.model.MeetingEvent;
 
 import java.util.ArrayList;
 import java.util.Date;

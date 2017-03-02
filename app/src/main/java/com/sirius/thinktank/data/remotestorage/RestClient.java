@@ -1,7 +1,7 @@
-package com.hw.sirius.thinktank.data.remotestorage;
+package com.sirius.thinktank.data.remotestorage;
 
-import com.hw.sirius.thinktank.data.remotestorage.useraccount.UserApi;
-import com.hw.sirius.thinktank.shared.BuildConfig;
+import com.sirius.thinktank.data.remotestorage.useraccount.UserApi;
+import com.sirius.thinktank.shared.BuildConfig;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

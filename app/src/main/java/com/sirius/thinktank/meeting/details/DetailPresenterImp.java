@@ -1,10 +1,10 @@
-package com.hw.sirius.thinktank.meeting.details;
+package com.sirius.thinktank.meeting.details;
 
-import com.hw.sirius.thinktank.meeting.details.interfaces.DetailPresenter;
-import com.hw.sirius.thinktank.meeting.details.interfaces.DetailView;
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
-import com.hw.sirius.thinktank.data.model.MeetingTopic;
-import com.hw.sirius.thinktank.data.model.MeetingTopicComments;
+import com.sirius.thinktank.meeting.details.interfaces.DetailPresenter;
+import com.sirius.thinktank.meeting.details.interfaces.DetailView;
+import com.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.data.model.MeetingTopic;
+import com.sirius.thinktank.data.model.MeetingTopicComments;
 
 import java.util.ArrayList;
 import java.util.Calendar;

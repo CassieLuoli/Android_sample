@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.meeting.calendar;
+package com.sirius.thinktank.meeting.calendar;
 
 import android.content.Intent;
 import android.graphics.RectF;
@@ -9,12 +9,12 @@ import android.util.Log;
 import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
-import com.hw.sirius.thinktank.R;
-import com.hw.sirius.thinktank.meeting.calendar.interfaces.CalendarPresenter;
-import com.hw.sirius.thinktank.meeting.calendar.interfaces.CalendarView;
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
-import com.hw.sirius.thinktank.meeting.details.DetailActivity;
-import com.hw.sirius.thinktank.shared.ui.BaseActivity;
+import com.sirius.thinktank.R;
+import com.sirius.thinktank.meeting.calendar.interfaces.CalendarPresenter;
+import com.sirius.thinktank.meeting.calendar.interfaces.CalendarView;
+import com.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.meeting.details.DetailActivity;
+import com.sirius.thinktank.shared.ui.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;

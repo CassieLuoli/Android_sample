@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.data.model;
+package com.sirius.thinktank.data.model;
 
 import java.util.List;
 

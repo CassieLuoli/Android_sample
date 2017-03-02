@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.meeting.details;
+package com.sirius.thinktank.meeting.details;
 
 /**
  * Created by Luoli on 16/8/9.

@@ -1,6 +1,6 @@
-package com.hw.sirius.thinktank.data.remotestorage.meetting;
+package com.sirius.thinktank.data.remotestorage.meetting;
 
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.data.model.MeetingEvent;
 
 import java.util.List;
 

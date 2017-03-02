@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank;
+package com.sirius.thinktank;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

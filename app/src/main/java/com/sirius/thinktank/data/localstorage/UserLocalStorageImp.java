@@ -1,7 +1,7 @@
-package com.hw.sirius.thinktank.data.localstorage;
+package com.sirius.thinktank.data.localstorage;
 
-import com.hw.sirius.thinktank.data.model.UserAccount;
-import com.hw.sirius.thinktank.shared.utils.PreferenceUtil;
+import com.sirius.thinktank.data.model.UserAccount;
+import com.sirius.thinktank.shared.utils.PreferenceUtil;
 
 public class UserLocalStorageImp implements UserLocalStorage {
     @Override

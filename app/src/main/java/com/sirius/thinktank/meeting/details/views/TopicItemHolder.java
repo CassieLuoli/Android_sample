@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.meeting.details.views;
+package com.sirius.thinktank.meeting.details.views;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hw.sirius.thinktank.R;
-import com.hw.sirius.thinktank.data.model.MeetingTopic;
-import com.hw.sirius.thinktank.data.model.MeetingTopicComments;
+import com.sirius.thinktank.R;
+import com.sirius.thinktank.data.model.MeetingTopic;
+import com.sirius.thinktank.data.model.MeetingTopicComments;
 
 import java.util.List;
 

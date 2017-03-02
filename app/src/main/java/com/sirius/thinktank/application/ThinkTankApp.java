@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.application;
+package com.sirius.thinktank.application;
 
 import android.app.Application;
 

@@ -1,9 +1,8 @@
-package com.hw.sirius.thinktank.account.login;
 
-import com.hw.sirius.thinktank.data.AccountManager;
-import com.hw.sirius.thinktank.account.login.interfaces.LoginDataProvider;
-import com.hw.sirius.thinktank.data.model.UserAccount;
-import com.hw.sirius.thinktank.data.remotestorage.useraccount.UserCloudStorage;
+import com.sirius.thinktank.account.login.interfaces.LoginDataProvider;
+import com.sirius.thinktank.data.AccountManager;
+import com.sirius.thinktank.data.model.UserAccount;
+import com.sirius.thinktank.data.remotestorage.useraccount.UserCloudStorage;
 
 import rx.Observable;
 import rx.Subscriber;

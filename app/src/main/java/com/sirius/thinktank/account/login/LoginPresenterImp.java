@@ -1,14 +1,14 @@
-package com.hw.sirius.thinktank.account.login;
+package com.sirius.thinktank.account.login;
 
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.hw.sirius.thinktank.data.AccountManager;
-import com.hw.sirius.thinktank.data.localstorage.UserLocalStorageImp;
-import com.hw.sirius.thinktank.data.remotestorage.useraccount.UserCloudStorage;
-import com.hw.sirius.thinktank.account.login.interfaces.LoginPresenter;
-import com.hw.sirius.thinktank.account.login.interfaces.LoginView;
-import com.hw.sirius.thinktank.data.model.UserAccount;
+import com.sirius.thinktank.data.AccountManager;
+import com.sirius.thinktank.data.localstorage.UserLocalStorageImp;
+import com.sirius.thinktank.data.remotestorage.useraccount.UserCloudStorage;
+import com.sirius.thinktank.account.login.interfaces.LoginPresenter;
+import com.sirius.thinktank.account.login.interfaces.LoginView;
+import com.sirius.thinktank.data.model.UserAccount;
 
 import rx.Observable;
 import rx.Subscriber;

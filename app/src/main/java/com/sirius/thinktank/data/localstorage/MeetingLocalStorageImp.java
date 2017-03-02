@@ -1,13 +1,13 @@
-package com.hw.sirius.thinktank.data.localstorage;
+package com.sirius.thinktank.data.localstorage;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.hw.sirius.thinktank.R;
-import com.hw.sirius.thinktank.data.model.MeetingEvent;
-import com.hw.sirius.thinktank.application.ThinkTankApp;
+import com.sirius.thinktank.R;
+import com.sirius.thinktank.data.model.MeetingEvent;
+import com.sirius.thinktank.application.ThinkTankApp;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import static com.hw.sirius.thinktank.account.login.LoginPresenterImp.TAG;
+import static com.sirius.thinktank.account.login.LoginPresenterImp.TAG;
 
 public class MeetingLocalStorageImp implements MeetingLocalStorage {
 

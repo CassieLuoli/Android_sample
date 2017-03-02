@@ -1,7 +1,7 @@
-package com.hw.sirius.thinktank.data.remotestorage.useraccount;
+package com.sirius.thinktank.data.remotestorage.useraccount;
 
-import com.hw.sirius.thinktank.data.model.UserAccount;
-import com.hw.sirius.thinktank.data.remotestorage.RestClient;
+import com.sirius.thinktank.data.model.UserAccount;
+import com.sirius.thinktank.data.remotestorage.RestClient;
 
 import rx.Observable;
 

@@ -1,4 +1,4 @@
-package com.hw.sirius.thinktank.meeting.details.views;
+package com.sirius.thinktank.meeting.details.views;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.hw.sirius.thinktank.R;
-import com.hw.sirius.thinktank.data.model.MeetingTopic;
+import com.sirius.thinktank.R;
+import com.sirius.thinktank.data.model.MeetingTopic;
 
 import java.util.List;
 
