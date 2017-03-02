@@ -3,7 +3,7 @@ package com.hw.sirius.thinktank.account.login;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.hw.sirius.thinktank.account.AccountManager;
+import com.hw.sirius.thinktank.data.AccountManager;
 import com.hw.sirius.thinktank.data.localstorage.UserLocalStorageImp;
 import com.hw.sirius.thinktank.data.remotestorage.useraccount.UserCloudStorage;
 import com.hw.sirius.thinktank.account.login.interfaces.LoginPresenter;

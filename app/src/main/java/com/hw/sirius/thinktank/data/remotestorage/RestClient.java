@@ -16,7 +16,6 @@ public class RestClient {
     private RestClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.HOST)
-                .client(new OkHttpClient())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

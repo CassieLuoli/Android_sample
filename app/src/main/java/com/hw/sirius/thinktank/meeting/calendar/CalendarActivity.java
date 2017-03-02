@@ -36,14 +36,12 @@ public class CalendarActivity extends BaseActivity implements CalendarView {
     @BindView(R.id.home_weekview)
     WeekView weekView;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.meeting_calendar);
         initView();
     }
-
 
     private void initView() {
         calendarView.setOnDateChangeListener(new android.widget.CalendarView.OnDateChangeListener() {
@@ -64,7 +62,7 @@ public class CalendarActivity extends BaseActivity implements CalendarView {
         weekView.setOnEventClickListener(new WeekView.EventClickListener() {
             @Override
             public void onEventClick(WeekViewEvent event, RectF eventRect) {
-                ((CalendarPresenter) presenter).select((MeetingEvent)event);
+                ((CalendarPresenter) presenter).select((MeetingEvent) event);
             }
         });
     }
@@ -109,7 +107,7 @@ public class CalendarActivity extends BaseActivity implements CalendarView {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        ((CalendarPresenter)presenter).back();
+        ((CalendarPresenter) presenter).back();
     }
 
     @Override
